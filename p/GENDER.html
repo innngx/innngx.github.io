@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender</title>
+  </head>
+  <body>
+    <p>
+      <form>
+        First name:<br>
+        <input type="text" id="fname">
+        <br>
+        Last name:<br>
+        <input type="text" id="lname">
+      </form>
+      <br>
+      <button type="button" onclick="myFunction()">
+        Gender
+      </button>
+      <!-- <div id="api"></div> -->
+      <script>
+      function myFunction() {
+        var f = document.getElementById("fname").value;
+        var l = document.getElementById("lname").value;
+        var api = "http://api.namsor.com/onomastics/api/json/gender/"
+        var url = api + f + "/" + l
+          // document.getElementById("api").innerHTML = url
+          window.location.href = url
+      }
+      </script>
+    </p>
+    <hr>
+    <p style="font-size:80%;">
+      Using
+      <abbr title="http://api.namsor.com/onomastics/api/json/gender/">API</abbr>
+      from
+      <a href="http://blog.namsor.com/api/" target="_blank">NamSor</a>
+    </p>
+  </body>
+</html>
