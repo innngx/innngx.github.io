@@ -6,30 +6,32 @@
     <title>Gender</title>
   </head>
   <body>
-    <p>
-      <form>
-        First name:<br>
-        <input type="text" id="fname">
-        <br>
-        Last name:<br>
-        <input type="text" id="lname">
-      </form>
+    <form>
+      First name:<br>
+      <input type="text" id="fname">
       <br>
-      <button type="button" onclick="myFunction()">
-        Gender
-      </button>
-      <!-- <div id="api"></div> -->
-      <script>
-      function myFunction() {
-        var f = document.getElementById("fname").value;
-        var l = document.getElementById("lname").value;
-        var api = "http://api.namsor.com/onomastics/api/json/gender/"
-        var url = api + f + "/" + l
-          // document.getElementById("api").innerHTML = url
-          window.location.href = url
-      }
-      </script>
-    </p>
+      Last name:<br>
+      <input type="text" id="lname">
+    </form>
+    <br>
+    <button type="button" onclick="myFunction()">
+      Gender
+    </button>
+    <br><br>
+    <iframe id="api"></iframe>
+
+    <script>
+    function myFunction() {
+      var f = document.getElementById("fname").value;
+      var l = document.getElementById("lname").value;
+      var api = "http://api.namsor.com/onomastics/api/json/gender/"
+      var url = api + f + "/" + l
+        document.getElementById("api").src = url
+        // window.location.href = url
+    }
+    </script>
+
+    <!-- footer -->
     <hr>
     <p style="font-size:80%;">
       Using
