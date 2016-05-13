@@ -1,0 +1,1 @@
+git subtree pull --prefix=aria2/ --squash git@github.com:ziahamza/webui-aria2.git master
