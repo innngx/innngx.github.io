@@ -1,2 +1,2 @@
 # xgaoga.github.io
-### <a href=http://xgao.xyz>http://xgao.xyz</a>
+### [https://xgao.io](https://xgao.io)
